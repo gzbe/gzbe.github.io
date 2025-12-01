@@ -1,3 +1,4 @@
+
 body {
     overflow: hidden;
     margin: 0;
@@ -75,7 +76,7 @@ canvas {
     bottom: 50px;
     padding: 30px;
     font-size: 20px;
-    font-family: "Satoshi", sans-serif;
+    font-family: "Kedebideri 600", sans-serif;
 }
 
 .sparkleEffect {
