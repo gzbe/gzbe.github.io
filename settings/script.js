@@ -98,3 +98,12 @@ window.addEventListener('resize', () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 });
+
+const myJSON = {
+    "name": "Example",
+};
+
+function copyJSON() {
+    const jsonText = JSON.stringify(myJSON, null, 2);
+    navigator.clipboard.writeText(jsonText);
+}
