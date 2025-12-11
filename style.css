@@ -1,6 +1,6 @@
 
 body {
-    overflow: hidden;
+    overflow: visible;
     margin: 0;
 }
 canvas {
@@ -20,7 +20,7 @@ canvas {
 
 }
 
-.headerBlock {
+.mainBox {
     width: 600px;
     z-index: 10;
     height: 400px;
@@ -40,6 +40,17 @@ canvas {
     -webkit-backdrop-filter: blur(50px);
     border: 1.5px solid rgba(255, 255, 255, 0.69);
 }
+
+.headerBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    position: relative;
+    flex-direction: column;
+} 
 @media screen and (max-width: 600px) {
     .headerBlock {
         width: 90%;
@@ -64,6 +75,15 @@ canvas {
     font-size: 40px;
     font-family: "Satoshi", sans-serif !important;
     font-weight: 600;
+}
+
+.textStyleSettings {
+    color: azure;
+    position: relative;
+    top: 30px;
+    font-size: 40px;
+    font-family: "Satoshi", sans-serif !important;
+    font-weight: 400;
 }
 
 .glow-text {
@@ -95,8 +115,9 @@ canvas {
     bottom: 35px;
     transition: transform 0.3s ease;
 }
-.iconAttribut   es:hover {
+.iconAttributes:hover {
     transform: scale(1.2) rotate(10deg);
+    cursor: pointer;
 }
 
 .glow-effect {
@@ -113,7 +134,47 @@ canvas {
 }
 
 
-.fade-in {
+.fade-in1 {
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
+}
+
+.fade-in2 {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards 0.5s;
+}
+
+.fade-in3 {
+    opacity: 0;
+    animation: fadeIn 0.3s ease-in forwards
+}
+
+.settingsTextAnim {
+    z-index: 11;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.settingsTextAnim:hover {
+  cursor: pointer;
+  transform: scale(1.1) translateY(5px);
+}
+
+.settingsTextAnim:hover .settingsArrowAnim {
+    display: inline-block;
+    opacity: 1;
+    animation: fadeIn 0.3s ease-in forwards, arrow 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes arrow {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+a {
+  color: inherit;       /* or specify another color */
+  text-decoration: none;
 }
